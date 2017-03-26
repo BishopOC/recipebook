@@ -1,15 +1,19 @@
 var express = require('express');
 var server = express();
-var port = process.env.PORT || 8080;
-var mongoURI = process.env.MONGOURI || require('./secrets').MONGOURI;
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+
+var userRouter = require('./routers/user.router.js');
+
+var port = process.env.PORT || 8080;
+var mongoURI = process.env.MONGOURI || require('./secrets').MONGOURI;
 
 server.use(express.static(__dirname + '/public'));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.connect(mongoURI);
+server.use(userRouter);
 
 server.get('/', function(req, res){
   res.sendFile('index.html', {root: __dirname + '/public/html'});
