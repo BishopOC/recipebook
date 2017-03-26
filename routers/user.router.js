@@ -29,7 +29,7 @@ router.get('/users', function(req, res){
       });
     } else {
       res.status(200).json({
-        msg: users
+        users: users
       });
     }
   });
@@ -61,7 +61,7 @@ router.put('/users/:id', function(req, res){
   });
 });
 router.delete('/users/:id', function(req, res){
-  User.delete({_id: req.params.id}, function(err){
+  User.remove({_id: req.params.id}, function(err){
     if(err){
       res.status(500).json({
         msg: err
