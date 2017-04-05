@@ -12,7 +12,7 @@ router.post('/signup', function(req, res){
     } else {
       res.status(201).json({
         msg: 'successfully signed up'
-      })
+      });
     }
   });
 });
