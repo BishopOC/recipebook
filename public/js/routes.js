@@ -20,6 +20,13 @@
         access:false
       }
     })
+    .when('/recipes', {
+      controller: 'RecipesController',
+      templateUrl: 'html/views/recipes.html',
+      restricted: {
+        access:false
+      }
+    })
     .otherwise({
       redirectTo: '/',
       restricted: {

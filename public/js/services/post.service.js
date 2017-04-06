@@ -9,9 +9,6 @@
 
     function getAll(){
       return $http.get(base)
-                  .then(function(response){
-                    console.log(response);
-                  });
     }
     function getOne(id){
       var url = `${base}/${id}`

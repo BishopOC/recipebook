@@ -1,0 +1,10 @@
+
+<ul>
+  <li ng-repeat="post in posts">
+    <div>
+      {{ post.title }}
+      {{ post.body }}
+      <button ng-click='delete(post)'>delete</button>
+    </div>
+  </li>
+</ul>
