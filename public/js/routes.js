@@ -27,6 +27,13 @@
         access:false
       }
     })
+    .when('/edit/:postId', {
+      controller: 'EditController',
+      templateUrl: 'html/views/edit.html',
+      restricted: {
+        access:false
+      }
+    })
     .otherwise({
       redirectTo: '/',
       restricted: {

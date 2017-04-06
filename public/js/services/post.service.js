@@ -8,14 +8,11 @@
     var base = '/posts';
 
     function getAll(){
-      return $http.get(base)
+      return $http.get(base);
     }
     function getOne(id){
-      var url = `${base}/${id}`
-      return $http.get(url)
-                  .then(function(response){
-                    console.log(response);
-                  });
+      var url = `${base}/${id}`;
+      return $http.get(url);
     }
     function create(post){
       return $http.post(base, post)
@@ -24,11 +21,8 @@
                   });
     }
     function update(post){
-      var url = `${base}/${post._id}`
-      return $http.put(url, post)
-                  .then(function(response){
-                    console.log(response);
-                  });
+      var url = `${base}/${post._id}`;
+      return $http.put(url, post);
     }
     function deletePost(post){
       var url = `${base}/${post._id}`

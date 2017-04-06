@@ -9,8 +9,8 @@
 
     function create(post){
       PostService.create(post)
-                 .then(function(response){
-                   console.log(response);
+                 .then(function(){
+                   $location.path('/recipes');
                  })
                  .catch(function(err){
                    console.log(err);
