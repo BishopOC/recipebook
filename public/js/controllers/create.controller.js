@@ -8,6 +8,8 @@
     $scope.create = create;
 
     function create(post){
+      var userId = UserService.currentUser()._id;
+      post.author = userId;
       PostService.create(post)
                  .then(function(){
                    $location.path('/recipes');

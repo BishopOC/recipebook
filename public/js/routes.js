@@ -17,19 +17,26 @@
       controller: 'CreateController',
       templateUrl: 'html/views/create.html',
       restricted: {
-        access:false
+        access:true
       }
     })
     .when('/recipes', {
       controller: 'RecipesController',
       templateUrl: 'html/views/recipes.html',
       restricted: {
-        access:false
+        access:true
       }
     })
     .when('/edit/:postId', {
       controller: 'EditController',
       templateUrl: 'html/views/edit.html',
+      restricted: {
+        access:true
+      }
+    })
+    .when('/login', {
+      controller: 'LoginController',
+      templateUrl: 'html/views/login.html',
       restricted: {
         access:false
       }

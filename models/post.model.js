@@ -14,7 +14,16 @@ var postSchema = mongoose.Schema({
   },
   updated:{
     type: Date
+  },
+  author: {
+    required: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
+});
+
+postSchema.pre('findOneAndUpdate', function(){
+  this.update({}, {$set: { updated: Date.now() }});
 });
 
 var Post = mongoose.model('Post', postSchema);

@@ -8,28 +8,40 @@
     var base = '/posts';
 
     function getAll(){
-      return $http.get(base);
+      var options = {
+        headers: {
+          Authorization: `Bearer ${UserService.getToken()}`
+        }
+      }
+      return $http.get(base, options);
     }
     function getOne(id){
       var url = `${base}/${id}`;
       return $http.get(url);
     }
     function create(post){
-      return $http.post(base, post)
-                  .then(function(response){
-                    console.log(response);
-                  });
+      return $http.post(base, post);
     }
     function update(post){
       var url = `${base}/${post._id}`;
-      return $http.put(url, post);
-    }
-    function deletePost(post){
-      var url = `${base}/${post._id}`
-      return $http.delete(url)
+      var options = {
+        headers: {
+          Authorization: `Bearer ${UserService.getToken()}`
+        }
+      }
+      return $http.put(url, post, options)
                   .then(function(response){
                     console.log(response);
                   });
+    }
+    function deletePost(post){
+      var url = `${base}/${post._id}`
+      var options = {
+        headers: {
+          Authorization: `Bearer ${UserService.getToken()}`
+        }
+      }
+      return $http.delete(url, options);
     }
     return {
       getAll: getAll,

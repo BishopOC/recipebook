@@ -1,7 +1,7 @@
 <div>
-  <input type="text" ng-model='post.title' ng-required='true' placeholder="Title">
+  <input type="text" ng-model='post.title' placeholder="Title">
 </div>
 <div>
-  <textarea type="text" ng-model='post.body' ng-required='true'><textarea>
+  <textarea ng-model='post.body'></textarea>
 </div>
-<button ng-click='create(post)'>Submit Recipe</button>
+<button ng-click='create(post)'> Submit Recipe </button>
