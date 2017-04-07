@@ -9,6 +9,7 @@
     .when('/', {
       controller: 'SignupController',
       templateUrl: 'html/views/signup.html',
+      css: 'css/signup.css',
       restricted: {
         access:false
       }
