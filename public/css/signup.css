@@ -3,6 +3,7 @@ body{
   padding: 0;
   background-image: url("../html/images/signup.png");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 form{
   margin-top: 45vh;
