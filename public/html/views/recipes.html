@@ -1,13 +1,6 @@
 <a href="/#!/create">Create a Recipe</a>
 <ul>
   <li ng-repeat="post in posts">
-    <div>
-      {{ post.title }}
-    </div>
-    <div>
-      {{ post.body }}
-      <button ng-click='edit(post)'>edit</button>
-      <button ng-click='delete(post)'>delete</button>
-    </div>
+    <a ng-href="/#!/read/{{ post._id }}">{{post.title}}</a>
   </li>
 </ul>

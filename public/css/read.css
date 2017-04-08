@@ -1,0 +1,19 @@
+body{
+background-image: url("../html/images/cuttingboard.png");
+}
+div#recipe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div#recipe p {
+  max-width: 55vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 3vh;
+  border-radius: 7px;
+  margin-top: 1vh;
+
+
+}

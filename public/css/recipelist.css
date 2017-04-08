@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("../html/images/book.png"), url("../html/images/cuttingboard.png");
+  background-size: 105vw 105vh, cover;
+  /*background-position: center;*/
+  background-repeat: no-repeat, repeat;
+  background-position: -2vw 0;
+}
+ul#list {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: 7vw;
+  margin-top: 5vw;
+  color: none;
+}
+
+ul#list li{
+  padding: 0;
+  margin: 0;
+  color: none;
+}
+ul#list li#createlink{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2vh;
+  color: none;
+}
+ul#list li a{
+  color: black;
+  font-size: 4vh;
+  text-decoration: none;
+  font-family: 'Architects Daughter', cursive;
+  transition: all 0.3s ease;
+}
+ul#list li a:hover{
+  color: rgb(46, 155, 29);

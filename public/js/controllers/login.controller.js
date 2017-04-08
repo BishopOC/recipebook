@@ -11,7 +11,7 @@
     function login(user){
       UserService.login(user)
                  .then(function(){
-                   $location.path('/recipes');
+                   $location.path('/recipebook');
                  })
                  .catch(function(err){
                    console.log(err);

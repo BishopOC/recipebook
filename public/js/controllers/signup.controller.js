@@ -2,16 +2,17 @@
   angular.module('recipebook')
          .controller('SignupController', SignupController);
 
-  SignupController.$inject = ['$scope', 'UserService'];
+  SignupController.$inject = ['$scope', 'UserService', '$location'];
 
-  function SignupController($scope, UserService){
+  function SignupController($scope, UserService, $location){
     $scope.newUser = {};
     $scope.signup = signup;
 
     function signup(user){
       UserService.signup(user)
                  .then(function(response){
-                   $scope.newUser = {};
+
+                   $location.path('/login');
                  })
                  .catch(function(err){
                    console.log(err);
