@@ -20,6 +20,7 @@ input {
   font-size: 3.5vh;
   font-weight: 200;
   font-family: 'Quicksand', sans-serif;
+  padding-left: 1vw;
 }
 ::-webkit-input-placeholder {
   color: darkgrey;

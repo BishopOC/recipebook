@@ -17,6 +17,7 @@
     .when('/create', {
       controller: 'CreateController',
       templateUrl: 'html/views/create.html',
+      css: '../css/create.css',
       restricted: {
         access:true
       }

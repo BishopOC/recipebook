@@ -1,7 +1,14 @@
-<div>
-  <input type="text" ng-model='post.title' placeholder="Title">
-</div>
-<div>
-  <textarea ng-model='post.body'></textarea>
-</div>
-<button ng-click='create(post)'> Submit Recipe </button>
+
+
+<form id='create' ng-submit="create(post)">
+  <div id='createtitle'>
+    <input type="text" ng-model='post.title' placeholder="Recipe Name">
+  </div>
+  <div id='createbody'>
+
+      <trix-editor angular-trix class='trix-content' name="area1" cols="20" ng-model='post.body' ng-bind-html='MytrustedHtml'></trix-editor >
+
+
+  </div>
+  <button type='submit'> Submit Recipe </button>
+</form>

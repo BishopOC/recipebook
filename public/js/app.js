@@ -1,7 +1,9 @@
 (function() {
   angular.module('recipebook', [
-    "ngRoute",
-    "angularCSS",
+    'ngRoute',
+    'angularCSS',
+    'angularTrix',
+    'ngSanitize'
   ]);
 
 }());

@@ -1,19 +1,39 @@
 body{
-background-image: url("../html/images/cuttingboard.png");
+  margin: 0;
+  padding: 0;
+  background-image: url("../html/images/book.png"), url("../html/images/cuttingboard.png");
+  background-size: 55vw 105vh, cover;
+  /*background-position: center;*/
+  background-repeat: no-repeat, repeat;
+  background-position: 20vw 4vh;
 }
 div#recipe{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
+  margin-left: 33vw;
+  margin-top: 1vw;
+  max-height: 85vh;
+}
+div#recipe p#title{
+  font-size: 5vh;
+  border-bottom: solid 2px #000000;
+     display: inline;
+     padding-bottom: 3px;
+}
+div#recipe p {
+  max-width: 30vw;
+  /*background-color: rgba(255, 255, 255, 0.7);*/
+  padding: 1vh;
+
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 3vh;
+
+
 }
 
-div#recipe p {
-  max-width: 55vw;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 3vh;
-  border-radius: 7px;
-  margin-top: 1vh;
-
-
+div#recipe p#recipe{
+  margin-top: -2vw;
+  overflow: scroll;
 }
