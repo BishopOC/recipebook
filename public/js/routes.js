@@ -22,16 +22,10 @@
         access:true
       }
     })
-    .when('/recipes', {
-      controller: 'RecipesController',
-      templateUrl: 'html/views/recipes.html',
-      restricted: {
-        access:true
-      }
-    })
     .when('/edit/:postId', {
       controller: 'EditController',
       templateUrl: 'html/views/edit.html',
+      css: '../css/edit.css',
       restricted: {
         access:true
       }

@@ -29,10 +29,8 @@
           Authorization: `Bearer ${UserService.getToken()}`
         }
       }
-      return $http.put(url, post, options)
-                  .then(function(response){
-                    console.log(response);
-                  });
+      return $http.put(url, post, options);
+
     }
     function deletePost(post){
       var url = `${base}/${post._id}`

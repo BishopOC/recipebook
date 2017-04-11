@@ -44,7 +44,7 @@ button{
   background-color: rgba(87, 211, 59, 0.7);
   font-family: 'Poiret One', cursive;
   font-size: 3vh;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 button:hover{
   background-color: rgb(12, 104, 0);

@@ -54,7 +54,7 @@ router.post('/posts', function(req, res){
 });
 
 router.put('/posts/:id', auth, function(req, res){
-  Post.findOneAndUpdate({_id: req.params.id, author: req.payload._id}, req.body, function(err, posts){
+  Post.findOneAndUpdate({_id: req.params.id, author: req.payload._id}, req.body, function(err, post){
     if(err){
       res.status(500).json({
         msg: err

@@ -49,7 +49,7 @@ div#createtitle{
 
 }
 
-button{
+button#editbutton{
   margin-top: 1vh;
   margin-left: 30vw;
   height: 4vh;

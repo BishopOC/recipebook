@@ -18,5 +18,10 @@
                  });
 
     }
+    function UserId(){
+      var id = $routeParams.UserId;
+      UserService.getOne(id);
+
+    }
   }
 }());

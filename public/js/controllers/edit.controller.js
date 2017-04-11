@@ -2,9 +2,9 @@
   angular.module('recipebook')
          .controller('EditController', EditController);
 
-  EditController.$inject = ['$scope', '$routeParams', 'PostService', '$location'];
+  EditController.$inject = ['$scope', '$routeParams', 'PostService', '$location', 'UserService'];
 
-  function EditController($scope, $routeParams, PostService, $location){
+  function EditController($scope, $routeParams, PostService, $location, UserService){
     $scope.edit = edit;
 
     editInit();
@@ -21,7 +21,7 @@
     function edit(post){
       PostService.update(post)
                  .then(function(response){
-                   $location.path('/recipes');
+                   $location.path('/recipebook');
                  })
                  .catch(function(err){
                    console.log(err);
