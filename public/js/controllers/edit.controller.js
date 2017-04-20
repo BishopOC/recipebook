@@ -7,6 +7,8 @@
   function EditController($scope, $routeParams, PostService, $location, UserService){
     $scope.edit = edit;
 
+    var user = UserService.currentUser();
+
     editInit();
     function editInit(){
       var id = $routeParams.postId;
@@ -21,7 +23,7 @@
     function edit(post){
       PostService.update(post)
                  .then(function(response){
-                   $location.path('/recipebook');
+                   $location.path(`/recipebook/${user.name}`);
                  })
                  .catch(function(err){
                    console.log(err);

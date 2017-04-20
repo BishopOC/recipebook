@@ -3,10 +3,10 @@ const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user.model');
 
 passport.use(new LocalStrategy({
-  usernameField: 'email'
+  usernameField: 'name'
 },
   function howWeAuth(username, password, done){
-    User.findOne({email: username}, function(err, user){
+    User.findOne({name: username}, function(err, user){
       if(err){
         return done(err);
       }

@@ -2,12 +2,14 @@
   angular.module('recipebook')
           .controller('RecipelistController', RecipelistController);
 
-  RecipelistController.$inject = ['$scope', 'PostService', '$location'];
+  RecipelistController.$inject = ['$scope', 'PostService', '$location', '$routeParams', 'UserService'];
 
-  function RecipelistController($scope, PostService, $location){
+  function RecipelistController($scope, PostService, $location, $routeParams, UserService){
     $scope.posts = [];
     $scope.edit = edit;
     $scope.delete = deletePost;
+    $scope.user = [];
+
 
     populatePosts();
     function populatePosts(posts){

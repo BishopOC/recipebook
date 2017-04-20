@@ -38,7 +38,7 @@
         access:false
       }
     })
-    .when('/recipebook', {
+    .when('/recipebook/:userId', {
       controller: 'RecipelistController',
       templateUrl: 'html/views/recipelist.html',
       css: '../css/recipelist.css',

@@ -57,7 +57,8 @@
         payload = JSON.parse(payload);
         return {
           _id: payload._id,
-          email: payload.email
+          email: payload.email,
+          name: payload.name
         }
       } else {
         return null;

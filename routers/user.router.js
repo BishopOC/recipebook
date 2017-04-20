@@ -59,7 +59,7 @@ router.get('/users', function(req, res){
     }
   });
 });
-router.get('users/:id', auth, function(req, res){
+router.get('/users/:id', auth, function(req, res){
   if(req.payload._id !== req.params.id){
     res.status(403).json({
       msg: 'Unauthorized'

@@ -29,7 +29,7 @@
         <a href="#!/blog">Recipes</a>
       </li>
       <li ng-show='isLoggedIn()'>
-        <a href="#!/recipebook">My Recipes</a>
+        <a href="#!/recipebook/{{userId}}">My Recipes</a>
       </li>
       <li ng-controller='LogoutController' ng-if='isLoggedIn()'>
         <a role='button' href="" ng-click='logout()'>Logout</a>
