@@ -11,7 +11,11 @@ const auth = expressJWT({
 
 
 router.get('/posts', auth, function(req, res){
-  Post.find({author: req.payload._id}, function (err, posts){
+  var userId;
+  if (req.payload && req.payload._id) {
+    userId = req.payload._id;
+  }
+  Post.find({author: userId}, function (err, posts){
     if(err){
       res.status(500).json({
         msg: err

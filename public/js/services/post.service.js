@@ -8,10 +8,13 @@
     var base = '/posts';
 
     function getAll(){
-      var options = {
-        headers: {
-          Authorization: `Bearer ${UserService.getToken()}`
-        }
+      var options;
+      if (UserService.getToken()) {
+        options = {
+          headers: {
+            Authorization: `Bearer ${UserService.getToken()}`
+          }
+        };
       }
       return $http.get(base, options);
     }
