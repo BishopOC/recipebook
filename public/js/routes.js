@@ -22,6 +22,14 @@
         access:true
       }
     })
+    .when('/createcat', {
+      controller: 'CreateCatController',
+      templateUrl: 'html/views/createcat.html',
+      css: '../css/create.css',
+      restricted: {
+        access:true
+      }
+    })
     .when('/edit/:postId', {
       controller: 'EditController',
       templateUrl: 'html/views/edit.html',
@@ -46,9 +54,25 @@
         access: false
       }
     })
+    .when('/recipecategories/:userId', {
+      controller: 'CategoryController',
+      templateUrl: 'html/views/recipecategories.html',
+      css: '../css/recipelist.css',
+      restricted: {
+        access: false
+      }
+    })
     .when('/read/:postId',{
         controller: 'ReadController',
         templateUrl: 'html/views/read.html',
+        css: '../css/read.css',
+        restricted: {
+          access: false
+        }
+      })
+    .when('/read/:categoryId',{
+        controller: 'ReadCatController',
+        templateUrl: 'html/views/readcat.html',
         css: '../css/read.css',
         restricted: {
           access: false
