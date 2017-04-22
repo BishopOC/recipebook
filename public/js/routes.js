@@ -38,6 +38,14 @@
         access:true
       }
     })
+    .when('/editcat/:categoryId', {
+      controller: 'EditCatController',
+      templateUrl: 'html/views/editcat.html',
+      css: '../css/edit.css',
+      restricted: {
+        access:true
+      }
+    })
     .when('/login', {
       controller: 'LoginController',
       templateUrl: 'html/views/login.html',

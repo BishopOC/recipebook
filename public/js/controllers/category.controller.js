@@ -5,7 +5,7 @@
   CategoryController.$inject = ['$scope', 'CategoryService', '$location', '$routeParams', 'UserService'];
 
   function CategoryController($scope, CategoryService, $location, $routeParams, UserService){
-    $scope.categories = [];
+    $scope.category = [];
     $scope.edit = edit;
     $scope.delete = deletePost;
     $scope.user = [];
@@ -19,8 +19,8 @@
                   $scope.categories = response.data.posts;
                 });
     }
-    function edit(post){
-      var url = `edit/${post._id}`;
+    function edit(category){
+      var url = `editcat/${category._id}`;
       $location.path(url);
     }
     function deletePost(category){

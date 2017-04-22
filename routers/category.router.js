@@ -10,8 +10,8 @@ const auth = expressJWT({
 });
 
 
-router.get('/category', function(req, res){
-  Category.find({}, function (err, posts){
+router.get('/category', auth, function(req, res){
+  Category.find({author: req.payload._id}, function (err, posts){
     if(err){
       res.status(500).json({
         msg: err
@@ -53,8 +53,8 @@ router.post('/category', function(req, res){
   });
 });
 
-router.put('/category/:id', function(req, res){
-  Category.findOneAndUpdate({_id: req.params.id}, req.body, function(err, post){
+router.put('/category/:id', auth, function(req, res){
+  Category.findOneAndUpdate({_id: req.params.id, author: req.payload._id}, req.body, function(err, post){
     if(err){
       res.status(500).json({
         msg: err
@@ -71,8 +71,8 @@ router.put('/category/:id', function(req, res){
   });
 });
 
-router.delete('/category/:id', function(req, res){
-  Category.remove({_id: req.params.id}, function(err, post){
+router.delete('/category/:id', auth, function(req, res){
+  Category.remove({_id: req.params.id, author: req.payload._id}, function(err, post){
     if(err){
       res.status(500).json({
         msg: err

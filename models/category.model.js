@@ -4,6 +4,11 @@ var categorySchema = mongoose.Schema({
   title:{
     type:String,
     required: true
+  },
+  author: {
+    required: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 });
 
