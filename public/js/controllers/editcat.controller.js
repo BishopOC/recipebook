@@ -8,7 +8,10 @@
     $scope.edit = edit;
 
     var user = UserService.currentUser();
-
+    var user = UserService.currentUser();
+    if(user && user.name){
+      $scope.userId = user.name;
+    }
     editInit();
     function editInit(){
       var id = $routeParams.categoryId;
@@ -20,8 +23,8 @@
                    console.log('errorr');
                  });
     }
-    function edit(post){
-      CategoryService.update(post)
+    function edit(category){
+      CategoryService.update(category)
                  .then(function(response){
                    $location.path(`/recipecategories/${user.name}`);
                  })

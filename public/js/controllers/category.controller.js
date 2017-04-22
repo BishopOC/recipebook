@@ -10,12 +10,14 @@
     $scope.delete = deletePost;
     $scope.user = [];
 
-
+    var user = UserService.currentUser();
+    if(user && user.name){
+      $scope.userId = user.name;
+    }
     populatePosts();
     function populatePosts(categories){
       CategoryService.getAll(categories)
                 .then(function(response){
-                  console.log(response);
                   $scope.categories = response.data.posts;
                 });
     }

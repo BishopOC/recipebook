@@ -3,7 +3,7 @@
     <a href="/#!/createcat">Create a Category</a>
   </li>
   <li ng-repeat="category in categories">
-    <a ng-href="/#!/readcat/{{ category._id }}">{{category.title}}</a>
+    <a ng-href="/#!/recipebook/{{ userId }}">{{category.title}}</a>
     <button id='listEdit' ng-click="edit(category)"><i class="fa fa-pencil" aria-hidden="true"></i>
 </button>
     <button id='deletebutton' ng-click="delete(category)"><i class="fa fa-trash" aria-hidden="true"></i>
