@@ -62,6 +62,14 @@
         access: false
       }
     })
+    .when('/recipebook/:categoryId/:userId', {
+      controller: 'RecipelistController',
+      templateUrl: 'html/views/recipelist.html',
+      css: '../css/recipelist.css',
+      restricted: {
+        access: false
+      }
+    })
     .when('/recipecategories/:userId', {
       controller: 'CategoryController',
       templateUrl: 'html/views/recipecategories.html',

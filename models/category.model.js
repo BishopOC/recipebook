@@ -7,7 +7,7 @@ var categorySchema = mongoose.Schema({
   },
   author: {
     required: true,
-    type: mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId, //use this same thing for fingerprint on categorical recipes
     ref: 'User'
   }
 });

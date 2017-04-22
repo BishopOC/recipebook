@@ -15,6 +15,7 @@
       }
       return $http.get(base, options);
     }
+    
     function getOne(id){
       var url = `${base}/${id}`;
       return $http.get(url);

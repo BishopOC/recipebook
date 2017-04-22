@@ -14,6 +14,19 @@
     if(user && user.name){
       $scope.userId = user.name;
     }
+
+
+    var id = $routeParams.categoryId;
+    CategoryService.getAll(id)
+               .then(function(response){
+                 $scope.categoryId = response.data.posts[0]._id;
+               })
+               .catch(function(){
+                 console.log('errorr');
+               });
+
+
+
     populatePosts();
     function populatePosts(categories){
       CategoryService.getAll(categories)
