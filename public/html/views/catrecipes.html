@@ -1,0 +1,13 @@
+<ul id='list'>
+  <li id='createlink'>
+    <a href="/#!/createcatrecipe/{{ category._id }}">Write a new recipe</a>
+  </li>
+  <li ng-repeat="post in posts">
+    <a ng-href="/#!/read/{{ post._id }}">{{post.title}}</a>
+    <button id='listEdit' ng-click="edit(post)"><i class="fa fa-pencil" aria-hidden="true"></i>
+</button>
+    <button id='deletebutton' ng-click="delete(post)"><i class="fa fa-trash" aria-hidden="true"></i>
+
+</button>
+  </li>
+</ul>

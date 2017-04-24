@@ -30,6 +30,14 @@
         access:true
       }
     })
+    .when('/createcatrecipe/:categoryId', {
+      controller: 'CreateCatRecipeController',
+      templateUrl: 'html/views/createcatrecipe.html',
+      css: '../css/create.css',
+      restricted: {
+        access:true
+      }
+    })
     .when('/edit/:postId', {
       controller: 'EditController',
       templateUrl: 'html/views/edit.html',
@@ -63,8 +71,8 @@
       }
     })
     .when('/recipebook/:categoryId/:userId', {
-      controller: 'RecipelistController',
-      templateUrl: 'html/views/recipelist.html',
+      controller: 'RecipelistCatController',
+      templateUrl: 'html/views/catrecipes.html',
       css: '../css/recipelist.css',
       restricted: {
         access: false

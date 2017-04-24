@@ -16,14 +16,15 @@
     }
 
 
-    var id = $routeParams.categoryId;
-    CategoryService.getAll(id)
-               .then(function(response){
-                 $scope.categoryId = response.data.posts[0]._id;
-               })
-               .catch(function(){
-                 console.log('errorr');
-               });
+      var id = $routeParams.categoryId;
+      CategoryService.getAll(id)
+                 .then(function(response){
+                   $scope.categoryId = response.data.posts[0]._id;
+                 })
+                 .catch(function(){
+                   console.log('errorr');
+                 });
+
 
 
 
