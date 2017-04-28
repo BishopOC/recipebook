@@ -17,12 +17,11 @@
       CategoryService.getOne(categoryId)
                  .then(function(response){
 
-                    $scope.category = response.data.posts[0];
+                  return  $scope.category = response.data.posts[0];
 
                  });
-
     }
-
+    var category = $routeParams.categoryId;
 
     populatePosts();
     function populatePosts(posts){
@@ -34,7 +33,7 @@
                 });
     }
     function edit(post){
-      var url = `edit/${post._id}`;
+      var url = `edit/${category}/${post._id}`;
       $location.path(url);
     }
     function deletePost(post){

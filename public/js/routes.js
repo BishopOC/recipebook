@@ -35,11 +35,19 @@
       templateUrl: 'html/views/createcatrecipe.html',
       css: '../css/create.css',
       restricted: {
-        access:false  
+        access:false
       }
     })
     .when('/edit/:postId', {
       controller: 'EditController',
+      templateUrl: 'html/views/edit.html',
+      css: '../css/edit.css',
+      restricted: {
+        access:true
+      }
+    })
+    .when('/edit/:categoryId/:postId', {
+      controller: 'EditCatRecipeController',
       templateUrl: 'html/views/edit.html',
       css: '../css/edit.css',
       restricted: {
