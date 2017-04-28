@@ -12,7 +12,7 @@
         headers: {
           Authorization: `Bearer ${UserService.getToken()}`
         }
-      }
+      };
       return $http.get(base, options);
     }
     function getOne(id){
@@ -28,27 +28,27 @@
         headers: {
           Authorization: `Bearer ${UserService.getToken()}`
         }
-      }
+      };
       return $http.put(url, post, options);
 
     }
     function deletePost(post){
-      var url = `${base}/${post._id}`
+      var url = `${base}/${post._id}`;
       var options = {
         headers: {
           Authorization: `Bearer ${UserService.getToken()}`
         }
-      }
+      };
       return $http.delete(url, options);
     }
 
-    
+
     return {
       getAll: getAll,
       getOne: getOne,
       create: create,
       update: update,
       delete: deletePost
-    }
+    };
   }
 }());
