@@ -41,6 +41,8 @@
       }
       return $http.delete(url, options);
     }
+
+    
     return {
       getAll: getAll,
       getOne: getOne,

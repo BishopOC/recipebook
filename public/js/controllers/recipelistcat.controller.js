@@ -2,9 +2,9 @@
   angular.module('recipebook')
           .controller('RecipelistCatController', RecipelistCatController);
 
-  RecipelistCatController.$inject = ['$scope', 'PostService', '$location', '$routeParams', 'UserService', 'CategoryService'];
+  RecipelistCatController.$inject = ['$filter', '$scope', 'PostService', '$location', '$routeParams', 'UserService', 'CategoryService'];
 
-  function RecipelistCatController($scope, PostService, $location, $routeParams, UserService, CategoryService){
+  function RecipelistCatController($filter, $scope, PostService, $location, $routeParams, UserService, CategoryService){
     $scope.posts = [];
     $scope.edit = edit;
     $scope.delete = deletePost;
@@ -16,7 +16,7 @@
       var categoryId = $routeParams.categoryId;
       CategoryService.getOne(categoryId)
                  .then(function(response){
-                   console.log(response);
+
                     $scope.category = response.data.posts[0];
 
                  });
@@ -26,9 +26,11 @@
 
     populatePosts();
     function populatePosts(posts){
+      var categoryId = $routeParams.categoryId;
       PostService.getAll(posts)
                 .then(function(response){
                   $scope.posts = response.data.posts;
+                  $scope.categoryId = categoryId;
                 });
     }
     function edit(post){

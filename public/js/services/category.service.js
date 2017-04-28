@@ -15,7 +15,7 @@
       }
       return $http.get(base, options);
     }
-    
+
     function getOne(id){
       var url = `${base}/${id}`;
       return $http.get(url);
@@ -42,12 +42,16 @@
       }
       return $http.delete(url, options);
     }
+
+
+
     return {
       getAll: getAll,
       getOne: getOne,
       create: create,
       update: update,
-      delete: deletePost
+      delete: deletePost,
+
     }
   }
 }());

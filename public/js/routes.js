@@ -35,7 +35,7 @@
       templateUrl: 'html/views/createcatrecipe.html',
       css: '../css/create.css',
       restricted: {
-        access:true
+        access:false  
       }
     })
     .when('/edit/:postId', {

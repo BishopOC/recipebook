@@ -17,7 +17,6 @@
       var categoryId = $routeParams.categoryId;
       CategoryService.getOne(categoryId)
                  .then(function(response){
-                   console.log(response);
                     $scope.category = response.data.posts[0];
 
                  });
@@ -31,11 +30,10 @@
       var userId = UserService.currentUser()._id;
       post.author = userId;
       var categoryId = $routeParams.categoryId;
+      post.category = categoryId;
       CategoryService.getOne(categoryId)
                  .then(function(response){
-                   console.log(response);
                     return category = response.data.posts[0];
-
                  });
       PostService.create(post)
                  .then(function(){

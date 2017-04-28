@@ -2,7 +2,7 @@
   <li id='createlink'>
     <a href="/#!/createcatrecipe/{{ category._id }}">Write a new recipe</a>
   </li>
-  <li ng-repeat="post in posts">
+  <li ng-repeat="post in posts | filter:{category: categoryId}">
     <a ng-href="/#!/read/{{ post._id }}">{{post.title}}</a>
     <button id='listEdit' ng-click="edit(post)"><i class="fa fa-pencil" aria-hidden="true"></i>
 </button>

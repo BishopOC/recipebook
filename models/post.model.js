@@ -21,8 +21,7 @@ var postSchema = mongoose.Schema({
     ref: 'User'
   },
   category: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Category'
+    type: String,
   }
 });
 
