@@ -38,8 +38,11 @@
       $location.path(url);
     }
     function deletePost(post){
+      var result = confirm('Are you sure you want to delete this recipe?');
+      if (result) {
       PostService.delete(post)
                  .then(populatePosts);
+               }
     }
   }
 }());

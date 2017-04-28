@@ -40,8 +40,11 @@
       $location.path(url);
     }
     function deletePost(category){
-      CategoryService.delete(category)
+      var result = confirm('Are you sure you want to delete this category?');
+      if (result) {
+      PostService.delete(category)
                  .then(populatePosts);
+               }
     }
   }
 }());
