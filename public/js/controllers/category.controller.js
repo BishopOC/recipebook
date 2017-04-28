@@ -42,7 +42,7 @@
     function deletePost(category){
       var result = confirm('Are you sure you want to delete this category?');
       if (result) {
-      PostService.delete(category)
+      CategoryService.delete(category)
                  .then(populatePosts);
                }
     }
