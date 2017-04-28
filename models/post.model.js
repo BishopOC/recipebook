@@ -19,6 +19,9 @@ var postSchema = mongoose.Schema({
     required: true,
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
+  },
+  category: {
+    type: String,
   }
 });
 

@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 
 var userRouter = require('./routers/user.router.js');
 var postRouter = require('./routers/post.router.js');
+var categoryRouter = require('./routers/category.router.js');
 
 var port = process.env.PORT || 8080;
 var mongoURI = process.env.MONGOURI || require('./secrets').MONGOURI;
@@ -22,6 +23,7 @@ server.get('/', function(req, res){
 
 server.use(userRouter);
 server.use(postRouter);
+server.use(categoryRouter);
 
 
 server.listen(port, function(){

@@ -25,11 +25,11 @@
       <li ng-hide='hideSignup || isLoggedIn()'>
         <a href="#!/">Signup</a>
       </li>
-      <li>
-        <a href="#!/blog">Recipes</a>
-      </li>
       <li ng-show='isLoggedIn()'>
         <a href="#!/recipebook/{{userId}}">My Recipes</a>
+      </li>
+      <li ng-show='isLoggedIn()'>
+        <a href="#!/recipecategories/{{userId}}">Categories</a>
       </li>
       <li ng-controller='LogoutController' ng-if='isLoggedIn()'>
         <a role='button' href="" ng-click='logout()'>Logout</a>
@@ -44,15 +44,20 @@
   <script src="js/config/auth.config.js"></script>
   <script src="js/services/user.service.js"></script>
   <script src="js/services/post.service.js"></script>
+  <script src="js/services/category.service.js"></script>
   <script src='js/controllers/signup.controller.js'></script>
   <script src='js/controllers/create.controller.js'></script>
-  <script src='js/controllers/recipes.controller.js'></script>
   <script src='js/controllers/edit.controller.js'></script>
   <script src='js/controllers/login.controller.js'></script>
   <script src='js/controllers/navbar.controller.js'></script>
   <script src='js/controllers/logout.controller.js'></script>
   <script src='js/controllers/recipelist.controller.js'></script>
+  <script src='js/controllers/recipelistcat.controller.js'></script>
+  <script src='js/controllers/category.controller.js'></script>
+  <script src='js/controllers/createcat.controller.js'></script>
+  <script src='js/controllers/createcatrecipe.controller.js'></script>
   <script src='js/controllers/read.controller.js'></script>
+  <script src='js/controllers/editcat.controller.js'></script>
   <script src="../../../angular-trix.js"></script>
 
 

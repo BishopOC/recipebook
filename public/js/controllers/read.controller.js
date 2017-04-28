@@ -11,7 +11,6 @@
       var postId = $routeParams.postId;
       PostService.getOne(postId)
                  .then(function(response){
-                   console.log(response);
                     $scope.post = response.data.posts[0];
                     $scope.MytrustedHtml = $sce.trustAsHtml(response.data.posts[0].body);
 

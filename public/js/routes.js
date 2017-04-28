@@ -22,9 +22,33 @@
         access:true
       }
     })
+    .when('/createcat', {
+      controller: 'CreateCatController',
+      templateUrl: 'html/views/createcat.html',
+      css: '../css/create.css',
+      restricted: {
+        access:true
+      }
+    })
+    .when('/createcatrecipe/:categoryId', {
+      controller: 'CreateCatRecipeController',
+      templateUrl: 'html/views/createcatrecipe.html',
+      css: '../css/create.css',
+      restricted: {
+        access:false  
+      }
+    })
     .when('/edit/:postId', {
       controller: 'EditController',
       templateUrl: 'html/views/edit.html',
+      css: '../css/edit.css',
+      restricted: {
+        access:true
+      }
+    })
+    .when('/editcat/:categoryId', {
+      controller: 'EditCatController',
+      templateUrl: 'html/views/editcat.html',
       css: '../css/edit.css',
       restricted: {
         access:true
@@ -46,9 +70,33 @@
         access: false
       }
     })
+    .when('/recipebook/:categoryId/:userId', {
+      controller: 'RecipelistCatController',
+      templateUrl: 'html/views/catrecipes.html',
+      css: '../css/recipelist.css',
+      restricted: {
+        access: false
+      }
+    })
+    .when('/recipecategories/:userId', {
+      controller: 'CategoryController',
+      templateUrl: 'html/views/recipecategories.html',
+      css: '../css/recipelist.css',
+      restricted: {
+        access: false
+      }
+    })
     .when('/read/:postId',{
         controller: 'ReadController',
         templateUrl: 'html/views/read.html',
+        css: '../css/read.css',
+        restricted: {
+          access: false
+        }
+      })
+    .when('/read/:categoryId',{
+        controller: 'ReadCatController',
+        templateUrl: 'html/views/readcat.html',
         css: '../css/read.css',
         restricted: {
           access: false
