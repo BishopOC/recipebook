@@ -1,7 +1,10 @@
 
 <ul id='list'>
   <li id='createlink'>
-    <a href="/#!/create">Write a new recipe</a>
+    <a href="/#!/create">+</a>
+  </li>
+  <li id='recipetitle'>
+    <p>Recipes</p>
   </li>
   <li ng-repeat="post in posts">
     <a ng-href="/#!/read/{{ post._id }}">{{post.title}}</a>

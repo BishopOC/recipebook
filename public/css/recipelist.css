@@ -13,10 +13,10 @@ ul#list {
   flex-direction: column;
   list-style: none;
   margin-left: 32.7vw;
-  margin-top: 5vw;
+  /*margin-top: 5vw;*/
   color: none;
   max-width: 30vw;
-  max-height: 77vh;
+  max-height: 85vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -29,24 +29,43 @@ ul#list li{
 
 
 }
+ul#list li#recipetitle{
+  font-family: 'Gentium Basic', serif;
+  font-size: 5vh;
+  text-align: center;
+  margin-bottom: -2vh;
+}
 ul#list li#createlink{
-  padding: 0;
+  /*padding: 0;*/
   margin: 0;
-  margin-bottom: 2vh;
-  color: none;
+  margin-bottom: -4vh;
+  margin-top: 2vh;
+  background-color: #36BF11;
+  text-align: center;
+  width: 4vw;
+  height: 7vh;
+  border-radius: 5px;
+
 
 }
 ul#list li#createlink a{
-  font-size: 6vh;
-
+  font-size: 40px;
+  /*margin-left: 10px;
+  background-color: green;
+  padding: 0 18px 0 18px;
+  border-radius: 5px;*/
+}
+ul#list li#createlink a:hover{
+  color: white;
 }
 ul#list li a{
   word-wrap: break-word;
   color: black;
   font-size: 4vh;
   text-decoration: none;
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: 'Gentium Basic', serif;
   transition: all 0.25s ease;
+  /*font-weight: 100;*/
 }
 
 ul#list li a:hover{
@@ -58,7 +77,7 @@ button#listEdit {
   width: 3vw;
   font-size: 2.5vh;
   text-align: center;
-  background-color: #72D858;
+  background-color: #36BF11;
   border: none;
   border-radius: 5px;
   transition: all 0.25s ease;

@@ -1,6 +1,9 @@
 <ul id='list'>
   <li id='createlink'>
-    <a href="/#!/createcat">Create a Category</a>
+    <a href="/#!/createcat">+</a>
+  </li>
+  <li id='recipetitle'>
+    <p>Categories</p>
   </li>
   <li ng-repeat="category in categories">
     <a ng-href="/#!/recipebook/{{ category._id }}/{{ userId }}">{{category.title}}</a>
