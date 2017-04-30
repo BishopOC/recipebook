@@ -19,8 +19,8 @@ div#recipe{
 div#recipe p#title{
   font-size: 5vh;
   border-bottom: solid 2px #000000;
-     display: inline;
-     padding-bottom: 3px;
+  display: inline;
+  padding-bottom: 3px;
 }
 div#recipe p {
   max-width: 30vw;
