@@ -25,16 +25,35 @@ div#recipe p#title{
 div#recipe p {
   max-width: 30vw;
   min-width: 30vw;
-  /*background-color: rgba(255, 255, 255, 0.7);*/
   padding: 1vh;
-
   font-family: 'Gentium Basic', serif;
   font-size: 4vh;
-
-
 }
 
 div#recipe p#recipe{
   margin-top: -2vw;
   overflow: scroll;
+}
+@media (max-width: 1024px){
+  body{
+    background-size: 145vw 107vh, 300%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center -5%, center -1vh;
+  }
+  div#recipe{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10vw;
+    margin-top: 1vw;
+    max-height: 85vh;
+  }
+  div#recipe p {
+    max-width: 80vw;
+    min-width: 80vw;
+    padding: 1vh;
+    font-family: 'Gentium Basic', serif;
+    font-size: 4vh;
+  }
 }

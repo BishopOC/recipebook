@@ -50,3 +50,23 @@ button:hover{
   background-color: rgb(12, 104, 0);
   color: white;
 }
+@media (max-width: 1024px){
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../html/images/signup.png");
+    background-size: 325%;
+    background-position: 80% 22%;
+  }
+  input {
+    width: 70vw;
+  }
+  button{
+    width: 22vw;
+  }
+  P{
+    font-size: 8vw;
+    margin: auto;
+    margin-left: -10%;
+  }
+}
