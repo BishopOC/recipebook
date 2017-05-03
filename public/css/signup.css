@@ -2,8 +2,9 @@ body{
   margin: 0;
   padding: 0;
   background-image: url("../html/images/signup.png");
-  background-size: cover;
+  background-size: 100% 150%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 form{
   margin-top: 45vh;
@@ -50,4 +51,44 @@ button{
 button:hover{
   background-color: rgb(12, 104, 0);
   color: white;
+}
+
+@media (max-width: 1024px){
+  input {
+    margin-top: 1vh;
+    height: 7vh;
+    width: 70vw;
+    background: rgba(255, 255, 255, 0.4);
+    border: darkgrey solid 1px;
+    border-radius: 5px;
+    font-size: 3.5vh;
+    font-weight: 200;
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 1vw;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../html/images/signup.png");
+    background-size: 300%;
+    background-position: center;
+  }
+  button{
+    margin-top: 1vh;
+    height: 6vh;
+    width: 22vw;
+    border-radius: 5px;
+    border: solid darkgrey 1px;
+    background-color: rgba(87, 211, 59, 0.7);
+    font-family: 'Poiret One', cursive;
+    font-size: 3vh;
+    transition: all 0.25s ease;
+  }
+  p{
+    font-family: 'Poiret One', cursive;
+    font-size: 5vw;
+    margin: 0;
+    /*margin-right: 7vw;*/
+    font-weight: 900;
+  }
 }
