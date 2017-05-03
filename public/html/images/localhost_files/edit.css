@@ -73,12 +73,10 @@ button:hover{
     background-position: center -5%, center -1vh;
   }
   form#create div input{
+
     width: 60vw;
   }
   div#createtitle{
     margin-left: 8vw;
-  }
-  button#editbutton{
-    width: 15vw;
   }
 }

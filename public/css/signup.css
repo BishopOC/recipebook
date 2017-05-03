@@ -2,9 +2,7 @@ body{
   margin: 0;
   padding: 0;
   background-image: url("../html/images/signup.png");
-  background-size: 100% 150%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
 }
 form{
   margin-top: 45vh;
@@ -70,8 +68,8 @@ button:hover{
     margin: 0;
     padding: 0;
     background-image: url("../html/images/signup.png");
-    background-size: 300%;
-    background-position: center;
+    background-size: 325%;
+    background-position: 20% 22%;
   }
   button{
     margin-top: 1vh;
@@ -86,7 +84,7 @@ button:hover{
   }
   p{
     font-family: 'Poiret One', cursive;
-    font-size: 5vw;
+    font-size: 6vw;
     margin: 0;
     /*margin-right: 7vw;*/
     font-weight: 900;

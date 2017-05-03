@@ -1,0 +1,52 @@
+body{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+
+}
+nav{
+  margin-top: inherit;
+  padding: 0;
+  background-color: rgba(70, 196, 83,0.7);
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+nav ul li{
+  float: right;
+  background: rgba(46, 155, 29, 0.7);
+  transition: all 0.3s ease;
+  min-width: 9vw;
+}
+nav ul li a{
+  text-decoration: none;
+  font-family: 'Poiret One', cursive;
+  font-size: 1.5vw;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.5vh 2vw;
+  text-decoration: none;
+}
+nav ul li:hover{
+  background-color: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 1024px){
+  nav ul li a{
+    text-decoration: none;
+    font-family: 'Poiret One', cursive;
+    font-size: 4.5vw;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.5vh 2vw;
+    text-decoration: none;
+  }
+}

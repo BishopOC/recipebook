@@ -107,7 +107,7 @@ button#deletebutton:hover{
   body{
     background-size: 145vw 107vh, 300%;
     background-repeat: no-repeat, no-repeat;
-    background-position: center -30%, center -1vh;
+    background-position: center -5%, center -1vh;
   }
   ul#list li#createlink{
     /*padding: 0;*/

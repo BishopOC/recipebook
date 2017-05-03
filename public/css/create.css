@@ -66,3 +66,30 @@ button:hover{
   background-color: rgb(12, 104, 0);
   color: white;
 }
+@media (max-width: 1024px){
+  body{
+    background-size: 145vw 107vh, 300%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center -5%, center -1vh;
+  }
+  form#create div input{
+    width: 60vw;
+  }
+  div#createtitle{
+    margin-left: 8vw;
+  }
+  button{
+    margin-top: 2vh;
+    margin-left: 25vw;
+    width: 25vw;
+    height: 10vh;
+  }
+  div#createbody {
+    min-width: 68vw;
+    max-height: 100vh;
+    overflow: scroll;
+    margin-left: 6vw;
+    margin-top: 4vh;
+  }
+
+}
